@@ -45,7 +45,7 @@ export default class MarqueeHorizontal extends Component {
         onTextClick : () => {},
     }
 
-    componentWillMount(){
+    UNSAFE_componentWillMount(){
         this.setState({
             textList : this.props.textList || [],
         })
@@ -78,7 +78,7 @@ export default class MarqueeHorizontal extends Component {
         }
     }
 
-    componentWillReceiveProps(nextProps){
+    UNSAFE_componentWillReceiveProps(nextProps){
         let newText = nextProps.textList || [];
         let oldText = this.props.textList || [];
         if (newText !== oldText) {
